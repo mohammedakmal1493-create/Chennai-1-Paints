@@ -1,0 +1,253 @@
+/* GLOBAL STYLES */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+
+/* NAVBAR */
+.navbar { background-color: #21618C; display: flex; justify-content: space-between; align-items: center; padding: 10px 5%; color: white; height: 80px; }
+.header-left { display: flex; align-items: center; gap: 15px; }
+.logo-box { width: 65px; height: 65px; background: white; border-radius: 4px; display: flex; justify-content: center; align-items: center; }
+.logo-img { width: 90%; object-fit: contain; }
+.nav-links a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; }
+
+/* WELCOME SECTION */
+.welcome-section { padding: 60px 5% 20px; background-color: #ffffff; }
+.welcome-header { width: 100%; text-align: left; }
+.welcome-header h2 { font-size: 2.8rem; color: #21618C; margin-bottom: 15px; }
+.welcome-header p { font-size: 1.15rem; line-height: 1.8; color: #444; text-align: justify; }
+
+/* IMPACT STATS SECTION */
+.impact-section { padding: 40px 5%; background-color: #f8f9fa; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+.impact-container { display: flex; justify-content: center; gap: 40px; max-width: 1200px; margin: 0 auto; }
+.impact-box { background: #ffffff; padding: 30px 50px; border-radius: 15px; display: flex; align-items: center; gap: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); flex: 1; border-bottom: 5px solid #21618C; }
+.impact-icon { font-size: 3rem; color: #21618C; }
+.impact-info h3 { display: inline-block; font-size: 2.5rem; color: #333; font-weight: 800; }
+.plus { font-size: 2rem; color: #d35400; font-weight: bold; }
+.impact-info p { font-size: 1.1rem; color: #666; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
+
+/* LARGE CTA BUTTONS */
+/* CTA Section Layout */
+.action-bar {
+    padding: 50px 5%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #eee;
+}
+
+.cta-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.cta-link {
+    text-decoration: none;
+}
+
+/* New Button Design - From Uiverse.io */
+.button2 {
+    display: inline-block;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #21618C; /* Updated to your brand blue */
+    padding: 1em 2.2em; /* Slightly larger for Home page prominence */
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button2:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.button2:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.button2:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #21618C; /* Matches Navbar brand blue */
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.button2:hover {
+    color: #ffffff;
+    border: 1px solid #21618C;
+}
+
+.button2:hover:before {
+    top: -35%;
+    background-color: #21618C;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button2:hover:after {
+    top: -45%;
+    background-color: #21618C;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+/* CAROUSEL */
+.hero-carousel { position: relative; width: 100%; height: 80vh; overflow: hidden; background: #000; }
+.carousel-track { display: flex; height: 100%; transition: transform 0.8s ease; }
+.carousel-slide { min-width: 100%; height: 100%; position: relative; }
+.carousel-slide img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; }
+.carousel-content { position: absolute; top: 50%; left: 8%; transform: translateY(-50%); color: white; }
+.arrow { position: absolute; top: 50%; background: rgba(0,0,0,0.3); color: white; border: none; padding: 15px; cursor: pointer; z-index: 10; }
+.next { right: 0; }
+.dot-container { position: absolute; bottom: 20px; width: 100%; display: flex; justify-content: center; gap: 10px; }
+.dot { width: 12px; height: 12px; background: rgba(255,255,255,0.5); border-radius: 50%; cursor: pointer; }
+.dot.active { background: white; }
+
+/* JOURNEY SECTION */
+.journey-section { padding: 80px 5%; background-color: #ffffff; text-align: center; }
+.section-title { font-size: 2.5rem; color: #21618C; margin-bottom: 60px; }
+.timeline-container { display: flex; justify-content: space-between; position: relative; max-width: 1200px; margin: 0 auto; padding-top: 40px; }
+.timeline-line { position: absolute; top: 50px; left: 0; width: 100%; height: 4px; background: #e0e0e0; z-index: 1; }
+.timeline-stop { position: relative; z-index: 2; flex: 1; padding: 0 20px; }
+.stop-dot { width: 24px; height: 24px; background: #ffffff; border: 4px solid #21618C; border-radius: 50%; margin: 0 auto 30px; transition: all 0.3s ease; }
+.timeline-stop.active .stop-dot { background: #21618C; transform: scale(1.3); box-shadow: 0 0 15px rgba(33, 97, 140, 0.4); }
+.stop-content { background: #f9f9f9; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.stop-year { display: block; font-size: 1.5rem; font-weight: 800; color: #21618C; margin-bottom: 10px; }
+
+/* FOOTER */
+.main-footer { background-color: #1a1a1a; color: #888; padding: 30px 5%; }
+.footer-container { display: flex; justify-content: space-between; align-items: center; }
+.footer-socials a { color: #888; margin-left: 20px; font-size: 1.3rem; transition: 0.3s; }
+.footer-socials a:hover { color: white; }
+
+@media (max-width: 768px) {
+    .impact-container { flex-direction: column; align-items: center; }
+    .timeline-container { flex-direction: column; gap: 50px; }
+    .timeline-line { display: none; }
+}
+
+/* ===================== */
+/* MOBILE OPTIMIZATION   */
+/* ===================== */
+
+@media (max-width: 768px) {
+    /* Adjust Section Spacing */
+    .glass-section {
+        width: 95%;
+        padding: 30px 20px;
+        margin: 40px auto;
+    }
+
+    /* Home Section Layout */
+    .home {
+        flex-direction: column-reverse; /* Put image on top of text */
+        gap: 30px;
+        text-align: center;
+    }
+
+    .home-detail h1 {
+        font-size: 36px;
+    }
+
+    .home-detail h2 {
+        font-size: 20px;
+    }
+
+    .download-social {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-box {
+        width: 240px;
+        height: 240px;
+    }
+
+    /* About Section */
+    .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-grid img {
+        margin: 0 auto;
+    }
+
+    .education-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .edu-left {
+        max-width: 100%;
+    }
+
+    /* Skills & Projects */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+        gap: 15px;
+    }
+
+    .project-card.active {
+        grid-column: span 1; /* Reset expansion for mobile screens */
+    }
+
+    /* Contact & ID Card */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .id-card {
+        width: 100%;
+        max-width: 320px;
+        transform: rotate(0deg); /* Remove rotation for better fit */
+        animation: floatCardMobile 6s ease-in-out infinite;
+    }
+
+    @keyframes floatCardMobile {
+        50% { transform: translateY(-10px); }
+    }
+
+    /* Header Logo Adjustment */
+    .logo img {
+        width: 200px; /* Resize wide logo */
+        height: auto;
+    }
+}
+
+/* Extra small devices (phones under 480px) */
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+    
+    .home-header {
+        padding: 15px 20px;
+    }
+}

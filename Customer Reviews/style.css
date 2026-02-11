@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+    background-color: #21618C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    color: white;
+    height: 80px;
+}
+
+.header-left { display: flex; align-items: center; gap: 15px; }
+
+.logo-box {
+    width: 65px; height: 65px;
+    background: rgba(255, 255, 255, 0);
+    display: flex; justify-content: center; align-items: center;
+    border-radius: 4px;
+}
+
+.logo-img { width: 90%; height: 90%; object-fit: contain; }
+
+.nav-links a {
+    color: white; text-decoration: none;
+    margin-left: 20px; font-weight: 500;
+}
+/* Hero Section */
+.reviews-hero {
+    background: linear-gradient(rgba(33, 97, 140, 0.8), rgba(33, 97, 140, 0.8));
+    padding: 80px 5%;
+    text-align: center;
+    color: white;
+}
+
+.reviews-hero h1 { font-size: 3rem; margin-bottom: 10px; }
+
+/* Section Headings */
+.section-heading {
+    text-align: center;
+    margin: 50px 0 30px;
+    font-size: 2rem;
+    color: #21618C;
+}
+
+/* Video Grid Alignment */
+.video-reviews-section, .text-reviews-section {
+    padding: 40px 10%;
+    background-color: #f9f9f9;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.video-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    background: #000;
+}
+
+.video-info { padding: 20px; }
+.video-info h4 { color: #21618C; margin-bottom: 5px; }
+.video-info p { color: #555; font-style: italic; font-size: 0.95rem; }
+
+/* Testimonial Cards */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #d35400; /* Orange highlight for engagement */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.stars { color: #f1c40f; margin-bottom: 15px; }
+.testimonial-card p { color: #444; line-height: 1.6; margin-bottom: 15px; }
+.client-name { font-weight: bold; color: #21618C; }
+
+/* FOOTER */
+.main-footer { background-color: #1a1a1a; color: #888; padding: 30px 5%; }
+.footer-container { display: flex; justify-content: space-between; align-items: center; }
+.footer-socials a { color: #888; margin-left: 20px; font-size: 1.3rem; transition: 0.3s; }
+.footer-socials a:hover { color: white; }
+
+
+/* ===================== */
+/* MOBILE OPTIMIZATION   */
+/* ===================== */
+
+@media (max-width: 768px) {
+    /* Adjust Section Spacing */
+    .glass-section {
+        width: 95%;
+        padding: 30px 20px;
+        margin: 40px auto;
+    }
+
+    /* Home Section Layout */
+    .home {
+        flex-direction: column-reverse; /* Put image on top of text */
+        gap: 30px;
+        text-align: center;
+    }
+
+    .home-detail h1 {
+        font-size: 36px;
+    }
+
+    .home-detail h2 {
+        font-size: 20px;
+    }
+
+    .download-social {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-box {
+        width: 240px;
+        height: 240px;
+    }
+
+    /* About Section */
+    .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-grid img {
+        margin: 0 auto;
+    }
+
+    .education-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .edu-left {
+        max-width: 100%;
+    }
+
+    /* Skills & Projects */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+        gap: 15px;
+    }
+
+    .project-card.active {
+        grid-column: span 1; /* Reset expansion for mobile screens */
+    }
+
+    /* Contact & ID Card */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .id-card {
+        width: 100%;
+        max-width: 320px;
+        transform: rotate(0deg); /* Remove rotation for better fit */
+        animation: floatCardMobile 6s ease-in-out infinite;
+    }
+
+    @keyframes floatCardMobile {
+        50% { transform: translateY(-10px); }
+    }
+
+    /* Header Logo Adjustment */
+    .logo img {
+        width: 200px; /* Resize wide logo */
+        height: auto;
+    }
+}
+
+/* Extra small devices (phones under 480px) */
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+    
+    .home-header {
+        padding: 15px 20px;
+    }
+}
